@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Izalienology — From One Covenant, Six Legacies Will Rise</title>
+  <meta name="description" content="The living codex of the BlendedPages universe. Shaped by the covenant of Khael Vireon and Sirae Ilyon. From their union, six legacies will rise." />
+  <meta property="og:title" content="Izalienology" />
+  <meta property="og:description" content="From one covenant, six legacies will rise." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://izalienology.com/" />
+  <link rel="icon" type="image/webp" href="assets/images/favicon-izalienology-steal-blue-ring-32x32.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --void:       #06050f;
+      --deep:       #0b0917;
+      --abyss:      #100e1f;
+      --gold:       #c9922a;
+      --gold-light: #e8b84b;
+      --gold-dim:   #6b4a14;
+      --silver:     #dddbe8;
+      --silver-dim: #9290a8;
+      --font-head: 'Cinzel', serif;
+      --font-lore: 'Cormorant Garamond', serif;
+      --font-ui:   'Jost', sans-serif;
+      --max-w: 1200px;
+      --nav-h: 6.8rem;
+      --ease: cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{font-size:62.5%;scroll-behavior:smooth}
+    body{font-family:var(--font-ui);font-size:1.6rem;font-weight:300;line-height:1.7;color:var(--silver);background:var(--void);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(1px 1px at 8% 12%,rgba(255,255,255,.55) 0%,transparent 100%),radial-gradient(1px 1px at 23% 4%,rgba(255,255,255,.35) 0%,transparent 100%),radial-gradient(1px 1px at 41% 28%,rgba(255,255,255,.45) 0%,transparent 100%),radial-gradient(1px 1px at 64% 9%,rgba(255,255,255,.60) 0%,transparent 100%),radial-gradient(1px 1px at 79% 3%,rgba(255,255,255,.30) 0%,transparent 100%),radial-gradient(1px 1px at 91% 19%,rgba(255,255,255,.50) 0%,transparent 100%),radial-gradient(1px 1px at 5% 42%,rgba(255,255,255,.40) 0%,transparent 100%),radial-gradient(1px 1px at 52% 55%,rgba(255,255,255,.55) 0%,transparent 100%),radial-gradient(1px 1px at 75% 60%,rgba(255,255,255,.30) 0%,transparent 100%),radial-gradient(1px 1px at 33% 69%,rgba(255,255,255,.45) 0%,transparent 100%),radial-gradient(1px 1px at 86% 75%,rgba(255,255,255,.40) 0%,transparent 100%),radial-gradient(1px 1px at 17% 82%,rgba(255,255,255,.55) 0%,transparent 100%),radial-gradient(1px 1px at 59% 87%,rgba(255,255,255,.30) 0%,transparent 100%),radial-gradient(2px 2px at 45% 95%,rgba(201,146,42,.35) 0%,transparent 100%),radial-gradient(2px 2px at 70% 38%,rgba(201,146,42,.25) 0%,transparent 100%),radial-gradient(1px 1px at 37% 56%,rgba(255,255,255,.40) 0%,transparent 100%),radial-gradient(1px 1px at 93% 49%,rgba(255,255,255,.50) 0%,transparent 100%),radial-gradient(1px 1px at 21% 64%,rgba(255,255,255,.30) 0%,transparent 100%),radial-gradient(1px 1px at 56% 74%,rgba(255,255,255,.35) 0%,transparent 100%)}
+    body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(20,16,60,.70) 0%,transparent 70%),radial-gradient(ellipse 55% 40% at 85% 105%,rgba(70,15,28,.40) 0%,transparent 70%),radial-gradient(ellipse 45% 35% at 8% 80%,rgba(14,10,50,.45) 0%,transparent 70%)}
+    nav,main,footer{position:relative;z-index:1}
+    .container{max-width:var(--max-w);margin:0 auto;padding:0 3.2rem}
+    .rule{display:block;width:100%;height:1px;background:linear-gradient(to right,transparent 0%,var(--gold-dim) 20%,var(--gold) 50%,var(--gold-dim) 80%,transparent 100%)}
+    .rule--short{width:10rem;margin:1.6rem auto}
+    .label{display:block;font-family:var(--font-ui);font-size:1.05rem;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;background:rgba(6,5,15,.90);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,146,42,.14)}
+    nav .container{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .nav-logo{font-family:var(--font-head);font-size:1.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-light);text-decoration:none}
+    .nav-links{list-style:none;display:flex;gap:3.2rem;align-items:center}
+    .nav-links a{font-family:var(--font-ui);font-size:1.2rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--silver-dim);text-decoration:none;transition:color .25s var(--ease)}
+    .nav-links a:hover{color:var(--gold-light)}
+
+    /* HERO */
+    .hero{min-height:calc(100vh - var(--nav-h));display:flex;align-items:center;justify-content:center;text-align:center;padding:9.6rem 3.2rem;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background-image:url('assets/images/web-background.webp');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.35;z-index:0}
+    .hero::before{content:'';position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(6,5,15,.30) 0%,rgba(6,5,15,.92) 100%)}
+    .hero::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56rem;height:56rem;border-radius:50%;border:1px solid rgba(201,146,42,.07);z-index:1;pointer-events:none}
+    .hero-inner{position:relative;z-index:2;max-width:86rem}
+    .hero-glyph{display:block;margin:0 auto 3.2rem;animation:fadeUp 1.2s var(--ease) .2s both}
+    .hero-eyebrow{font-family:var(--font-ui);font-size:1.05rem;font-weight:400;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem;animation:fadeUp 1s var(--ease) .4s both}
+    .hero-title{font-family:var(--font-head);font-size:clamp(4.4rem,8vw,8rem);font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--silver);line-height:1.0;margin-bottom:2.4rem;animation:fadeUp 1s var(--ease) .6s both}
+    .hero-tagline{font-family:var(--font-lore);font-size:clamp(2rem,3vw,2.8rem);font-weight:300;font-style:italic;color:var(--silver-dim);letter-spacing:.03em;margin-bottom:3.2rem;animation:fadeUp 1s var(--ease) .8s both}
+    .hero-desc{font-family:var(--font-lore);font-size:1.9rem;font-weight:400;line-height:1.85;color:var(--silver-dim);max-width:70rem;margin:3.2rem auto 0;animation:fadeUp 1s var(--ease) 1s both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(2.8rem)}to{opacity:1;transform:translateY(0)}}
+
+    /* FOUNDERS */
+    .founders{padding:9.6rem 0;background:linear-gradient(to bottom,var(--void) 0%,var(--deep) 50%,var(--void) 100%)}
+    .founders-header{text-align:center;margin-bottom:6.4rem}
+    .founders-header h2{font-family:var(--font-head);font-size:clamp(2.8rem,4vw,4.4rem);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--silver)}
+    .founders-header p{font-family:var(--font-lore);font-size:1.9rem;font-style:italic;color:var(--silver-dim);max-width:58rem;margin:1.6rem auto 0;line-height:1.8}
+    .founders-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:4.8rem;align-items:start}
+    .founder-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2.4rem}
+    .founder-img-wrap{width:100%;max-width:34rem;position:relative}
+    .founder-img-wrap::before{content:'';position:absolute;inset:-1px;border:1px solid rgba(201,146,42,.2);pointer-events:none;z-index:1}
+    .founder-img-wrap img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top center;filter:sepia(.08) brightness(.95);transition:filter .4s var(--ease)}
+    .founder-img-wrap:hover img{filter:sepia(0) brightness(1)}
+    .founder-name{font-family:var(--font-head);font-size:2.2rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--silver)}
+    .founder-title{font-family:var(--font-ui);font-size:1.05rem;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-top:-.8rem}
+    .founder-desc{font-family:var(--font-lore);font-size:1.75rem;font-weight:400;font-style:italic;line-height:1.8;color:var(--silver-dim);max-width:34rem}
+    .founder-desc strong{font-style:normal;font-weight:500;color:var(--silver)}
+    .founders-sigil{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:0;gap:2.4rem}
+    .founders-sigil img{width:24rem;height:24rem;object-fit:cover;object-position:center;opacity:.92}
+    @keyframes sealSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    .sigil-label{font-family:var(--font-head);font-size:1.1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dim);text-align:center}
+
+    /* COVENANT BANNER */
+    .covenant-banner{position:relative;height:48rem;overflow:hidden}
+    .covenant-banner img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.6)}
+    .covenant-banner-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3.2rem;background:linear-gradient(to bottom,rgba(6,5,15,.3) 0%,rgba(6,5,15,.65) 100%)}
+    .covenant-banner-overlay h2{font-family:var(--font-head);font-size:clamp(2.8rem,5vw,5.2rem);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--silver);line-height:1.1;margin-bottom:1.6rem}
+    .covenant-banner-overlay p{font-family:var(--font-lore);font-size:clamp(1.8rem,2.5vw,2.4rem);font-style:italic;color:var(--silver-dim);max-width:72rem;line-height:1.8}
+
+    /* HOUSES */
+    .houses{padding:9.6rem 0;background:var(--void)}
+    .houses-header{text-align:center;margin-bottom:6.4rem}
+    .houses-header h2{font-family:var(--font-head);font-size:clamp(2.8rem,4vw,4.4rem);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--silver)}
+    .houses-header p{font-family:var(--font-lore);font-size:1.9rem;font-style:italic;color:var(--silver-dim);max-width:62rem;margin:1.6rem auto 0;line-height:1.8}
+    .houses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+    .house-card{background:var(--abyss);border:1px solid rgba(201,146,42,.09);padding:3.2rem 2.4rem;text-align:center;position:relative;overflow:hidden;min-height:16rem}
+    .house-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-dim)}
+    .house-card::after{content:'';position:absolute;inset:0;background:rgba(6,5,15,.72);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+    .house-numeral{font-family:var(--font-head);font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-dim);display:block;margin-bottom:.8rem}
+    .house-name{font-family:var(--font-head);font-size:2rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--silver)}
+    .house-lock{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem}
+    .house-lock-text{font-family:var(--font-ui);font-size:1rem;letter-spacing:.3em;text-transform:uppercase;color:var(--silver-dim);opacity:.5}
+    .houses-note{text-align:center;margin-top:4rem}
+    .houses-note p{font-family:var(--font-lore);font-size:1.75rem;font-style:italic;color:var(--silver-dim);opacity:.7}
+
+    /* FOOTER */
+    footer{background:var(--void);border-top:1px solid rgba(201,146,42,.12);padding:6.4rem 0 3.2rem;text-align:center}
+    .footer-logo{font-family:var(--font-head);font-size:2rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);display:block;margin-bottom:1.2rem}
+    .footer-tagline{font-family:var(--font-lore);font-size:1.65rem;font-style:italic;color:var(--silver-dim);margin-bottom:3.2rem}
+    .footer-links{list-style:none;display:flex;justify-content:center;gap:3.2rem;margin-bottom:3.2rem;flex-wrap:wrap}
+    .footer-links a{font-family:var(--font-ui);font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--silver-dim);text-decoration:none;transition:color .25s var(--ease)}
+    .footer-links a:hover{color:var(--gold-light)}
+    .footer-copy{font-family:var(--font-ui);font-size:1.15rem;color:rgba(146,144,168,.45);letter-spacing:.06em}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .founders-grid{grid-template-columns:1fr;gap:4rem}
+      .founders-sigil{order:-1;padding-top:0}
+      .founders-sigil img{width:16rem;height:16rem}
+      .founder-card{max-width:48rem;margin:0 auto}
+      .houses-grid{grid-template-columns:repeat(2,1fr)}
+      .covenant-banner{height:36rem}
+    }
+    @media(max-width:560px){
+      .houses-grid{grid-template-columns:1fr}
+      .hero::after{width:32rem;height:32rem}
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="nav-logo" aria-label="Izalienology">Izalienology</a>
+      <ul class="nav-links" role="list">
+        <li><a href="thecodex/">The Codex</a></li>
+        <li><a href="voices/">Voices</a></li>
+        <li><a href="the-future-is-watching/">The Future is Watching</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <svg class="hero-glyph" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="36" cy="36" r="34" stroke="#c9922a" stroke-width=".5" opacity=".35"/>
+        <circle cx="36" cy="36" r="24" stroke="#c9922a" stroke-width=".5" opacity=".25"/>
+        <polygon points="36,8 42,20 56,20 46,29 49,42 36,35 23,42 26,29 16,20 30,20" fill="none" stroke="#c9922a" stroke-width=".9" opacity=".55"/>
+        <circle cx="36" cy="36" r="4" fill="#c9922a" opacity=".4"/>
+        <line x1="36" y1="2" x2="36" y2="14" stroke="#c9922a" stroke-width=".5" opacity=".3"/>
+        <line x1="36" y1="58" x2="36" y2="70" stroke="#c9922a" stroke-width=".5" opacity=".3"/>
+        <line x1="2" y1="36" x2="14" y2="36" stroke="#c9922a" stroke-width=".5" opacity=".3"/>
+        <line x1="58" y1="36" x2="70" y2="36" stroke="#c9922a" stroke-width=".5" opacity=".3"/>
+      </svg>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">The Living Codex</p>
+        <h1 class="hero-title" id="hero-title">Izalienology</h1>
+        <p class="hero-tagline">"From one covenant, six legacies will rise."</p>
+        <span class="rule"></span>
+        <p class="hero-desc">
+          A living codex shaped by the covenant of Khael Vireon and Sirae Ilyon —
+          two who rose against silence. Their union fractured into six legacies,
+          each bearing flame and voice into new forms across a galaxy
+          that does not forget.
+        </p>
+      </div>
+    </section>
+
+    <span class="rule"></span>
+
+    <!-- FOUNDERS -->
+    <section class="founders" id="founders" aria-labelledby="founders-heading">
+      <div class="container">
+        <div class="founders-header">
+          <span class="label">The First Covenant</span>
+          <h2 id="founders-heading">Khael Vireon &amp; Sirae Ilyon</h2>
+          <span class="rule rule--short"></span>
+          <p>
+            Before the Houses were named, before banners were raised over any world,
+            there was a binding forged not in ceremony but in mutual becoming.
+          </p>
+        </div>
+        <div class="founders-grid">
+
+          <!-- Khael -->
+          <article class="founder-card">
+            <div class="founder-img-wrap">
+              <img src="assets/images/khael-web.webp"
+                   alt="Khael Vireon — First Guardian, keeper of flame and form"
+                   loading="eager" />
+            </div>
+            <div>
+              <h3 class="founder-name">Khael Vireon</h3>
+              <p class="founder-title">First Guardian</p>
+            </div>
+            <p class="founder-desc">
+              <strong>From pain into strength</strong>, he forged survival into clarity.
+              He had never been the strongest. Never the fastest. He had learned to last.
+              A guardian philosopher, building not empires but people.
+            </p>
+          </article>
+
+          <!-- Covenant Sigil -->
+          <div class="founders-sigil" aria-hidden="true">
+            <img src="assets/images/house-veran-sigil-907x907.webp"
+                 alt="The Covenant Sigil of the First Hearth"
+                 loading="eager" />
+            <p class="sigil-label">The First Hearth<br/>Covenant of Flame</p>
+            <p style="font-family:var(--font-lore);font-size:1.55rem;font-style:italic;color:var(--silver-dim);text-align:center;line-height:1.7;max-width:18rem;">
+              Endurance and grace united. The sigil burns bright but never consumed.
+            </p>
+          </div>
+
+          <!-- Sirae -->
+          <article class="founder-card">
+            <div class="founder-img-wrap">
+              <img src="assets/images/sirae-web.webp"
+                   alt="Sirae Ilyon — First Voice, oracle and matriarch of memory"
+                   loading="eager" />
+            </div>
+            <div>
+              <h3 class="founder-name">Sirae Ilyon</h3>
+              <p class="founder-title">First Voice</p>
+            </div>
+            <p class="founder-desc">
+              <strong>Quiet brilliance turned to voice</strong> — she became the First Voice.
+              Oracle, dissenter, matriarch of memory and resilience.
+              Language may heal wounds, but only if it remembers where the wounds are.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <span class="rule"></span>
+
+    <!-- HALL OF BANNERS -->
+    <div class="covenant-banner" aria-hidden="true">
+      <img src="assets/images/hallofbanners.webp"
+           alt="The Hall of Banners — memory banners stitched with House colors and unit crests"
+           loading="lazy" />
+      <div class="covenant-banner-overlay">
+        <h2>The Legacy Yet to Divide</h2>
+        <p>
+          Their banners will bear flame and voice into new forms.
+          The future of Vireon and Ilyon will fracture into Houses that endure beyond them.
+          Each banner is both inheritance and burden —
+          the forge in which a galaxy itself will be tempered.
+        </p>
+      </div>
+    </div>
+
+    <!-- SIX HOUSES — Locked -->
+    <section class="houses" id="houses" aria-labelledby="houses-heading">
+      <div class="container">
+        <div class="houses-header">
+          <span class="label">Legacy</span>
+          <h2 id="houses-heading">The Six Houses</h2>
+          <span class="rule rule--short"></span>
+          <p>
+            Six legacies will rise. The Houses are not yet named.
+            Their banners will carry empathy, memory, strength, unity, justice, and hope
+            into the galaxy that comes after.
+          </p>
+        </div>
+        <div class="houses-grid" role="list">
+
+          <article class="house-card" role="listitem">
+            <span class="house-numeral">House I</span>
+            <h3 class="house-name">Empathy</h3>
+            <div class="house-lock" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,146,42,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="house-lock-text">Not yet named</span>
+            </div>
+          </article>
+
+          <article class="house-card" role="listitem">
+            <span class="house-numeral">House II</span>
+            <h3 class="house-name">Memory</h3>
+            <div class="house-lock" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,146,42,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="house-lock-text">Not yet named</span>
+            </div>
+          </article>
+
+          <article class="house-card" role="listitem">
+            <span class="house-numeral">House III</span>
+            <h3 class="house-name">Strength</h3>
+            <div class="house-lock" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,146,42,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="house-lock-text">Not yet named</span>
+            </div>
+          </article>
+
+          <article class="house-card" role="listitem">
+            <span class="house-numeral">House IV</span>
+            <h3 class="house-name">Unity</h3>
+            <div class="house-lock" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,146,42,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="house-lock-text">Not yet named</span>
+            </div>
+          </article>
+
+          <article class="house-card" role="listitem">
+            <span class="house-numeral">House V</span>
+            <h3 class="house-name">Justice</h3>
+            <div class="house-lock" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,146,42,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="house-lock-text">Not yet named</span>
+            </div>
+          </article>
+
+          <article class="house-card" role="listitem">
+            <span class="house-numeral">House VI</span>
+            <h3 class="house-name">Hope</h3>
+            <div class="house-lock" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,146,42,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span class="house-lock-text">Not yet named</span>
+            </div>
+          </article>
+
+        </div>
+        <div class="houses-note">
+          <p>The Houses will be revealed as the story unfolds.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <span class="footer-logo">Izalienology</span>
+      <p class="footer-tagline">"From one covenant, six legacies will rise."</p>
+      <span class="rule rule--short"></span>
+      <ul class="footer-links" role="list">
+        <li><a href="thecodex/">The Codex</a></li>
+        <li><a href="voices/">Voices</a></li>
+        <li><a href="the-future-is-watching/">The Future is Watching</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 BlendedPages. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
